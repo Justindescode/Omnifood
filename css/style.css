@@ -20,7 +20,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
@@ -292,7 +292,6 @@
 /***************************/
 .section-testimonials {
   background-color: #fae5d3;
-
   display: grid;
   grid-template-columns:
    /*think of fr as percentages  */ 55fr 45fr;

@@ -1,5 +1,6 @@
-/****************************/ /*HEADER*/
-/***************************/
+/**************************/
+/* HEADER */
+/**************************/
 
 .header {
   display: flex;
@@ -7,22 +8,27 @@
   align-items: center;
   background-color: #fdf2e9;
 
-  /*Because we want the header to be sticky  later fixed height is easier to work with */
+  /* Because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
   position: relative;
 }
+
 .logo {
   height: 2.2rem;
 }
-/***************************/ /* NAVIGATION SECTION*/
-/***************************/
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
 .main-nav-list {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 4.8rem;
 }
+
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
@@ -30,8 +36,9 @@
   color: #333;
   font-weight: 500;
   font-size: 1.8rem;
-  transform: all 0.3s;
+  transition: all 0.3s;
 }
+
 .main-nav-link:hover,
 .main-nav-link:active {
   color: #cf711f;
@@ -44,16 +51,18 @@
   color: #fff;
   background-color: #e67e22;
 }
+
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
 
-/* Mobile */
+/* MOBILE */
 .btn-mobile-nav {
   border: none;
   background: none;
   cursor: pointer;
+
   display: none;
 }
 
@@ -62,12 +71,32 @@
   width: 4.8rem;
   color: #333;
 }
+
 .icon-mobile-nav[name="close-outline"] {
   display: none;
 }
 
-/********************************/ /*HERO SECTION*/
-/***************************/
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
 
 .section-hero {
   background-color: #fdf2e9;
@@ -100,15 +129,17 @@
   gap: 1.6rem;
   margin-top: 8rem;
 }
+
 .delivered-imgs {
   display: flex;
 }
+
 .delivered-imgs img {
   height: 4.8rem;
   width: 4.8rem;
   border-radius: 50%;
   margin-right: -1.6rem;
-  border: solid 3px #fdf2e9;
+  border: 3px solid #fdf2e9;
 }
 
 .delivered-imgs img:last-child {
@@ -124,14 +155,18 @@
   color: #cf711f;
   font-weight: 700;
 }
-/********************************/ /*FEATURED IN SECTION*/
-/***************************/
+
+/**************************/
+/* FEATURED IN SECTION */
+/**************************/
+
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
 }
+
 .heading-featured-in {
   font-size: 1.4rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: 0.75px;
   font-weight: 500;
   text-align: center;
@@ -149,8 +184,10 @@
   filter: brightness(0);
   opacity: 50%;
 }
-/********************************/ /*HOW IT WORKS SECTION*/
-/***************************/
+
+/**************************/
+/* HOW IT WORKS SECTION */
+/**************************/
 
 .section-how {
   padding: 9.6rem 0;
@@ -162,10 +199,12 @@
   color: #ddd;
   margin-bottom: 1.2rem;
 }
+
 .step-description {
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
 .step-img-box {
   position: relative;
 
@@ -173,12 +212,12 @@
   align-items: center;
   justify-content: center;
 }
+
 .step-img-box::before,
 .step-img-box::after {
   content: "";
   display: block;
   border-radius: 50%;
-
   position: absolute;
   top: 50%;
   left: 50%;
@@ -187,13 +226,13 @@
 
 .step-img-box::before {
   width: 60%;
-  /* height: 60%;*/
+  /* height: 60%; */
 
-  /*60% of parents width */
+  /* 60% of parent's width */
   padding-bottom: 60%;
 
   background-color: #fdf2e9;
-  z-index: -1;
+  z-index: -2;
 }
 
 .step-img-box::after {
@@ -205,10 +244,12 @@
 
 .step-img {
   width: 35%;
+  /* z-index: 10; */
 }
 
-/********************************/ /*MEALS SECTION*/
-/***************************/
+/**************************/
+/* MEALS SECTION */
+/**************************/
 
 .section-meals {
   padding: 9.6rem 0;
@@ -218,13 +259,14 @@
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 11px;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .meal:hover {
   transform: translateY(-1.2rem);
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
+
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
 }
@@ -240,12 +282,12 @@
   padding: 0.4rem 0.8rem;
   font-size: 1.2rem;
   text-transform: uppercase;
-  background-color: #51cf66;
   color: #333;
   border-radius: 100px;
+  font-weight: 600;
 }
 
-.tag--vegitarian {
+.tag--vegetarian {
   background-color: #51cf66;
 }
 .tag--vegan {
@@ -256,23 +298,26 @@
 }
 
 .meal-title {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: #333;
   font-weight: 600;
   margin-bottom: 3.2rem;
 }
+
 .meal-attributes {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+
 .meal-attribute {
   font-size: 1.8rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
+
 .meal-icon {
   height: 2.4rem;
   width: 2.4rem;
@@ -288,33 +333,14 @@
   font-size: 1.8rem;
 }
 
-.list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
 
-.list-item {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  line-height: 1.2;
-}
-
-.list-icon {
-  width: 3rem;
-  height: 3rem;
-  color: #e67e22;
-}
-/********************************/ /*TESTIMONIALS SECTION*/
-/***************************/
 .section-testimonials {
-  background-color: #fae5d3;
+  background-color: #fdf2e9;
   display: grid;
-  grid-template-columns:
-   /*think of fr as percentages  */ 55fr 45fr;
+  grid-template-columns: 55fr 45fr;
   align-items: center;
 }
 
@@ -332,7 +358,9 @@
 .testimonial-img {
   width: 6.4rem;
   border-radius: 50%;
+  margin-bottom: 1.2rem;
 }
+
 .testimonial-text {
   font-size: 1.8rem;
   line-height: 1.8;
@@ -364,8 +392,10 @@
 .gallery-item img:hover {
   transform: scale(1.1);
 }
-/********************************/ /*PRICING SECTION AND FEATURES*/
-/***************************/
+
+/**************************/
+/* MEALS SECTION */
+/**************************/
 
 .section-pricing {
   padding: 9.6rem 0;
@@ -373,6 +403,7 @@
 
 .pricing-plan {
   border-radius: 11px;
+
   width: 75%;
 }
 
@@ -388,6 +419,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .pricing-plan--complete::after {
   content: "Best value";
   position: absolute;
@@ -407,6 +439,7 @@
   text-align: center;
   margin-bottom: 4.8rem;
 }
+
 .plan-name {
   color: #cf711f;
   font-weight: 600;
@@ -435,7 +468,7 @@
   color: #6f6f6f;
 }
 
-.plan-sign-up {
+.plan-sing-up {
   text-align: center;
   margin-top: 4.8rem;
 }
@@ -468,25 +501,27 @@
   line-height: 1.8;
 }
 
-/********************************/ /*CALL TO ACTION*/
-/***************************/
+/**************************/
+/* CTA SECTION */
+/**************************/
 
 .section-cta {
-  /* top/ right/ bottom/ left */
+  /* top / right / bottom / left */
   /* padding: 9.6rem 0 12.8rem 0; */
-  /* top/ horizontal/ left */
+
+  /* top / horizontal / left */
   padding: 4.8rem 0 12.8rem;
 }
+
 .cta {
   display: grid;
-  /* 2/3 =66.6% + 1/3 = 33.3% */
+  /* 2/3 = 66.6% + 1/3 = 33.3% */
   grid-template-columns: 2fr 1fr;
   /* background-color: #e67e22; */
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.015);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
 
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
-  /* keeps image rom over flowing container */
   overflow: hidden;
 }
 
@@ -496,7 +531,8 @@
 }
 
 .cta .heading-secondary {
-  color: #45260a;
+  /* color: #45260a; */
+  color: inherit;
   margin-bottom: 3.2rem;
 }
 
@@ -507,7 +543,6 @@
 }
 
 .cta-img-box {
-  /* Added a gradient over image  */
   background-image: linear-gradient(
       to right bottom,
       rgba(235, 151, 78, 0.35),
@@ -546,18 +581,17 @@
 }
 
 .cta-form input::placeholder {
-  color: #aaa !important;
+  color: #aaa;
 }
-
-/* Focus style on page for when item is active accessability erases the default blue lines */
 
 .cta *:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 
-/********************************/ /*FOOTER*/
-/***************************/
+/**************************/
+/* FOOTER */
+/**************************/
 
 .footer {
   padding: 12.8rem 0;
@@ -571,12 +605,6 @@
 .logo-col {
   display: flex;
   flex-direction: column;
-}
-
-.footer-heading {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 4rem;
 }
 
 .footer-logo {
@@ -600,6 +628,12 @@
   line-height: 1.6;
   color: #767676;
   margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
 }
 
 .contacts {
